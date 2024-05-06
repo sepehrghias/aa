@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphic.aa.view.ProfileMenu" fx:id="pane">
+   <top>
+      <Label text="PROFILE MENU" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <VBox maxWidth="140.0" prefHeight="358.0" prefWidth="140.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane maxWidth="100.0" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Circle fx:id="circle" layoutX="76.0" layoutY="69.0" onMouseClicked="#avatarMenu" radius="74.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="4.0">
+                     <fill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.11999999731779099" green="0.5746666789054871" blue="1.0" opacity="0.01529636699706316" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+               </children>
+            </AnchorPane>
+            <Button mnemonicParsing="false" onMouseClicked="#logout" prefHeight="30.0" prefWidth="121.0" text="logout">
+               <VBox.margin>
+                  <Insets left="5.0" top="40.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#removeAccount" prefHeight="30.0" prefWidth="121.0" text="remove account">
+               <VBox.margin>
+                  <Insets left="5.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="121.0" text="back" onMouseClicked="#back">
+               <VBox.margin>
+                  <Insets left="5.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets left="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="66.0" prefWidth="450.0" spacing="100.0">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="old username" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="40.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="old password">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="450.0" spacing="80.0">
+               <children>
+                  <TextField fx:id="oldUsername" prefWidth="127.0" promptText="old username">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="oldPassword" prefWidth="127.0" promptText="old password" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="450.0" spacing="100.0">
+               <children>
+                  <Label text="new username">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="new password">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="450.0" spacing="80.0">
+               <children>
+                  <TextField fx:id="newUsername" prefWidth="127.0" promptText="new username">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="newPassword" prefWidth="127.0" promptText="new password" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="450.0" spacing="90.0">
+               <children>
+                  <Button maxHeight="30.0" maxWidth="121.0" mnemonicParsing="false" onMouseClicked="#changeUsername" text="change username">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button maxHeight="30.0" maxWidth="121.0" mnemonicParsing="false" onMouseClicked="#changePassword" text="change password" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
